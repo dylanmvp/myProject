@@ -1,0 +1,30 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<div class="container">
+  <h3 class="bg-success text-center text-primary">已开放城市</h3>
+
+  <div class="list-group">
+    <a class="list-group-item list-group-item-danger" href="#/detail/{{tmp.did}}" ng-repeat="tmp in city_list">
+      <div class="media">
+        <div class="media-left media-middle" style="width:50%">
+          <img class="media-object" ng-src="imgs/{{tmp.img}}" alt="" style="width:100%;height:300px;"/>
+        </div>
+        <div class="media-body media-middle">
+          <h3 class="text-primary">{{tmp.name}}</h3>
+          <p>{{tmp.introduce}}</p>
+          <p class="text-right">
+            <button type="button" class="btn btn-success">攻略</button>
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <button ng-if="hasMore" type="button" class="btn btn-block btn-success" ng-click="loadMore()">更多城市</button>
+  <h3 ng-if="!hasMore" class="text-warning bg-danger text-center">Sorry!其他城市亟待开放!敬请期待</h3>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"></div>
+
+
+

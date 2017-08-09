@@ -1,0 +1,38 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<div class="container">
+  <ul class="breadcrumb">
+    <li>
+      <a href="#/main">返回</a>
+    </li>
+    <li>攻略</li>
+  </ul>
+  <div class="panel panel-default" ng-repeat="tmp in city_scenery">
+    <div class="panel-body">
+      <h2>{{tmp.Scenery}}</h2>
+      <img style="width:100%;height:100%"
+        class="img-responsive"
+        ng-src="imgs/{{tmp.SceneryImg}}" alt=""/>
+      <p class="text-info">{{tmp.SceneryIntroduce}}</p>
+      <p class="text-warning">
+        路线...
+        <a class="btn btn-success" href="tpl/map.html">查看地图</a>
+      </p>
+    </div>
+    <div class="panel-footer">
+      <div class="text-right">
+        <button
+          ng-click="jump('/travel')"
+          class="btn btn-success">Let'go!</button>
+        <button
+          ng-click="jump('/main')"
+          class="btn btn-danger">考虑一下</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include="'tpl/include/footer.html'"></div>
+
+
+

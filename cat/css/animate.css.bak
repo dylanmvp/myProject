@@ -1,0 +1,120 @@
+/*# lg pc*/
+@media screen and (min-width:1024px) and (max-width:1400px){
+	/*slider and intro*/
+	#slider,#intro{height:550px;}
+	/*video*/
+	#uImgs li video{
+		width:600px;
+		height:350px;
+		top:90px;
+  }
+  /*intro p lineheight*/
+	#intro p{
+		line-height:1.8em;
+  }
+}
+/*# simple pc*/
+@media screen and (min-width:992px) and (max-width:1023px){
+	/*slider and intro*/
+	#slider,#intro{height:450px;}
+	/*video*/
+	#uImgs li video{
+		width:500px;
+		height:300px;
+		top:60px;
+  }
+	/*intro h1 and p size*/
+	#intro h1{
+	  font-size:3em;
+  }
+  #intro p{
+	  font-size:.8rem;
+	  line-height:2em;
+  }
+	/*content*/
+	#content{
+		padding:200px 0 60px;
+	}
+	#content h1{
+	  font-size:3em;
+		top:2em;
+	}
+	#content .list {
+    top: 120px;
+  }
+}
+/*# pad*/
+@media screen and (min-width:768px) and (max-width:991px){
+	/*slider and intro*/
+	#slider,#intro{height:350px;}
+	/*video*/
+	#uImgs li video{
+		width:450px;
+		height:250px;
+		top:40px;
+  }
+	/*intro h1 and p size*/
+	#intro h1{
+	  font-size:2em;
+  }
+  #intro p{
+	  font-size:.6rem;
+	  line-height:1.4em;
+  }
+	/*content*/
+	#content{
+		padding:180px 0 40px;
+	}
+	#content h1{
+	  font-size:2em;
+	}
+	#content .list {
+    font-size: 1.2em;
+    top: 120px;
+  }
+	#list_content li{
+	  width:45%;
+	}
+}
+/*# phone*/
+@media screen and (max-width:767px){
+  /*drop menu font-size*/
+	.drop_menu{
+		font-size:.8em;
+	}
+	/*slider and intro*/
+	#slider,#intro{height:350px;}
+	#uImgs li video{
+		width:300px;
+		height:200px;
+		top:40px;
+  }
+	/*intro h1 and p size*/
+	#intro h1{
+	  font-size:1.6em;
+  }
+  #intro p{
+	  font-size:.2rem;
+		padding:5%;
+		width:90%;
+	  line-height:1rem;
+  }
+	/*content*/
+	#content{
+		padding:120px 0 20px;
+	}
+	#content h1{
+	  font-size:1.6em;
+	}
+	#content .list {
+    font-size: 1.2em;
+    top: 80px;
+  }
+	#list_content li{
+	  width:100%;
+	}
+}
+/*Super small*/
+@media screen and (max-width:420px){
+	#intro{height:450px;}
+}

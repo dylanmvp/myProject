@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>demo</title>
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<!-- nav -->	
+	<header id="head" class="clear">
+		<a href="javascript:void(0)">
+			<img src="imgs/logo.png" alt="">
+		</a>
+		<div class="rt" id="dropdown">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</header>
+	<!-- menu -->
+	<ul class="drop_menu">
+		<li>欢迎来到异次元</li>
+		<li>Welcome To The Other Side</li>
+		<li>Добро пожаловать, раз юаней</li>
+		<li>Bienvenue à sa varient</li>
+		<li>異次元へようこそ</li>
+	</ul>
+	<!-- main -->	
+	<section>
+	<!-- slider -->	
+		<div id="slider">
+			<ul id="uImgs">
+				<li><video src="imgs/2016trim.webm" controls poster="imgs/david1.png" ></video></li>
+				<li><video src="imgs/2016trim.webm" controls poster="imgs/david1.png"></video></li>
+				<li><video src="imgs/2016trim.webm" controls poster="imgs/david1.png"></video></li>
+				<li><video src="imgs/2016trim.webm" controls poster="imgs/david1.png"></video></li>
+			</ul>
+			<ul id="uIdx">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	<!-- introduce -->
+		<div id="intro">
+			<h1>Section/02</h1>
+			<p>私は昔何だかその妨害人に対してつもりの以上からあるですだろ<br>にもああどうしてもそのならたまでをありていたではだかそのに対してつもりの以上からあるですだろ。<br> てもそ番に関係院もどうしてもその料理ならたまでをありていたでは指<br>てもその係院もどうしてもその料理ならたまでをありていたでは<br>私は昔何だかその妨害人に対してつもりの以上からあるですだろ。<br>あどうしあ一にもてもそのならたまでをありてに対してつもりの以上からあるですだろ。<br> もどうに関係院もどうしてもその料理ならたまでをありてあにもどうし</p>
+		</div>
+	<!-- image-text -->
+		<div id="content">
+			<h1>Section/03</h1>
+			<ul class="list">
+				<li class="selected">all</li>
+				<li>cate01</li>
+				<li>cate02</li>
+				<li>cate03</li>
+			</ul>
+			<ul id="list_content">
+				<li>
+						<img class="lazy" data-src="imgs/thumb-01.jpg">
+						<h4>愉快たたのましはだまた狸</h4>
+						<p>愉快たたのましはだまた狸の元気あたりのうちがはにわかにいいかげんうたて、みんなじゃあ狸を叩きがっ方たる。</p>
+						<span>cate01</span><span>cate02</span>
+					</li>
+					<li>
+						<img class="lazy" data-src="imgs/thumb-02.jpg">
+						<h4>なおりすぎおれはセロをないたて</h4>
+						<p>なおりすぎおれはセロをないたてたくさんの孔の下たちを泣い第二音楽みちの演奏へ聞きつけてやるましだ。</p>
+						<span>cate03</span>
+					</li>
+					<li>
+						<img class="lazy" data-src="imgs/thumb-03.jpg">
+						<h4>位もたくさんなっとまわった。</h4>
+						<p>位もたくさんなっとまわった。壁は一落ちセロのようを入れてきでしょ。狸は首血とおれが熟してしまいた。</p>
+						<span>cate02</span><span>cate03</span>
+					</li>
+					<li>
+						<img class="lazy" data-src="imgs/thumb-04.jpg">
+						<h4>楽長はかっこうがす譜が云いて馬車</h4>
+						<p>楽長はかっこうがす譜が云いて馬車を眼に出るてにわかに毎日きれがったときできったませ。</p>
+						<span>cate01</span><span>cate02</span>
+					</li>
+					<li>
+						<img class="lazy" data-src="imgs/thumb-05.jpg">
+						<h4>ぽんぽんきちするて、立ってつかれる</h4>
+						<p>ぽんぽんきちするて、立ってつかれるてはじめでしと医者がまたぎてしまいはもうじぶんがにまるで位ひいたまし。</p>
+						<span>cate01</span><span>cate02</span>
+					</li>
+					<li>
+						<img class="lazy" data-src="imgs/thumb-06.jpg">
+						<h4>い鍛冶ましと弾きていてなか</h4>
+						<p>ない鍛冶ましと弾きていてなかへ直しようだからだへちとだからかなり先生にぺんつづけたん。</p>
+						<span>cate01</span><span>cate02</span>
+					</li>
+			</ul>
+		</div>
+	</section>
+	<!-- footer copyright -->
+	<footer id="footer">COPYRIGHT © testtest ALL RIGHTS RESERVED.</footer>
+	<!-- link script jquery -->
+	<script src="js/jquery-1.11.3.js"></script>
+	<!-- link for lazyload -->
+	<script src="js/jquery.lazyload.js"></script>
+	<!-- animate js from greensock -->
+	<script src="js/TweenMax.js"></script>
+	<!-- link own script -->
+	<script src="js/demo.js"></script>
+</body>
+</html>

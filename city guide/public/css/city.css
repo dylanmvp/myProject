@@ -1,0 +1,133 @@
+*{
+  margin:0;padding:0;
+}
+body{
+  margin:60px 0;
+  background: url('../imgs/city.jpg');
+  background-attachment: fixed;
+  background-size:cover;
+}
+ul{
+  list-style: none;
+}
+/*//页头*/
+.header{
+  background: rgba(0,0,0,.1);
+  border: none;
+}
+#brand{
+  color:#000;
+  font-weight: 700;
+  font-size:26px;
+}
+#brand:hover{
+  color:gold;
+}
+.h-color1 .icon{
+  color:#000;
+}
+.h-color1:hover .icon{
+  color:red;
+}
+.h-color2 .icon{
+  color:#000;
+}
+.h-color2:hover .icon{
+  color:green;
+}
+#qq:hover,#weixin:hover,#weibo:hover,#twitter:hover{
+  background-color: #000;
+}
+#qq:hover .icon{
+  color:#F72900;
+}
+#weixin:hover .icon{
+  color:#116F20;
+}
+#weibo:hover .icon{
+  color:#E6870D;
+}
+#twitter:hover .icon{
+  color:#1AB2E8;
+}
+.b-line{
+  border-bottom: 1px solid silver;
+}
+/*页尾*/
+.footer{
+  background: rgba(0,0,0,.1);
+  border: none;
+}
+.f-list{
+  margin: 0;
+  padding:0;
+  display: flex;
+}
+.f-list li{
+  cursor: pointer;
+  width: 33%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 26px;
+}
+.f-list li:hover{
+  background: #000;
+}
+.f-list li:first-child:hover .icon{
+  color:red;
+}
+.f-list li:last-child:hover .icon{
+  color:yellow;
+}
+.f-list li:nth-child(2):hover .icon{
+  color:lightgreen;
+}
+.f-list li a{
+  display: inline-block;
+  width:100%;
+}
+
+/*start map*/
+#main{
+  width:100%;
+  height:100vh;
+}
+/*travel 页面 的list*/
+.t-list{
+  width:100%;
+  display: flex;
+  margin-top: 300px;
+}
+.t-list li{
+  width:20%;
+  text-align: center;
+  font-size: 100px;
+  background: #23527C;
+  /*line-height: 100px;*/
+  /*transition: all ease 1s;*/
+}
+.t-list li a{
+  display: inline-block;
+  width:100%;
+}
+.t-list li .icon i{
+  transition: all linear 1s;
+}
+.t-list li:hover{
+  background:#337AB7;
+  /*transform: rotate(360deg);*/
+}
+.t-list li:hover .icon{
+  color: #23527C;
+}
+.t-list li:hover .icon i{
+  transform:scale(1.4);
+}
+@media screen and (max-width: 768px) {
+  .t-list li{
+    font-size: 45px;
+  }
+  .t-list li:hover .icon i{
+    transform:rotate(1080deg);
+  }
+}
