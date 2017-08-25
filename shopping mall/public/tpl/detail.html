@@ -1,0 +1,42 @@
+<!--详情页面，用于获取后台数据，等待main2传参数，异步请求后台数据-->
+<div class="header_bg">
+  <button ui-sref="main2" class="button button-balanced" style="border-radius:0">
+    <i class="icon ion-arrow-return-left"></i>
+  </button>
+  <ion-content class="has-header has-footer">
+    <div class="list card">
+      <div class="item item-divider">
+        <h2 class="energized">{{detailList.info}}</h2>
+      </div>
+      <div class="item item-image">
+        <img ng-src="img/{{detailList.img}}">
+      </div>
+      <div class="item item-divider">
+        <p style="color: red">{{detailList.price}}</p>
+      </div>
+      <a class="item item-icon-right assertive" ng-click="addToCart()">
+        <i class="icon ion-arrow-return-right"></i>
+        加入购物车
+      </a>
+      <button class="button button-block button-balanced" ui-sref="cart">查看购物车</button>
+    </div>
+    <!--测试数据-->
+      <!--<div class="list card">-->
+        <!--<div class="item item-divider">-->
+          <!--<h2 class="energized">当季流行</h2>-->
+        <!--</div>-->
+        <!--<div class="item item-image">-->
+          <!--<img src="img/ry_l.jpg">-->
+        <!--</div>-->
+        <!--<div class="item item-divider">-->
+          <!--<p style="color: red">¥3999.00</p>-->
+        <!--</div>-->
+        <!--<a class="item item-icon-right assertive" href="#/cart">-->
+          <!--<i class="icon ion-arrow-return-right"></i>-->
+          <!--加入购物车-->
+        <!--</a>-->
+      <!--</div>-->
+  </ion-content>
+</div>
+
+

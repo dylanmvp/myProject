@@ -1,0 +1,49 @@
+/*主页背景图*/
+.s_img{
+  width:100vw;
+  height:100vh;
+  background:url('../img/shopMall.jpg');
+  background-size: contain;
+}
+/*商品位置*/
+.center_brand{
+  position: fixed;
+  top:20%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+/*登录按钮位置*/
+.center_login{
+  position: absolute;
+  top:75%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+/*注册按钮位置*/
+.center_register{
+  position: absolute;
+  top:85%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+/*页头颜色*/
+.header_color,.footer_color{
+  background-color: #CC0000;
+  color:#fff !important;
+}
+.header,.list_active{
+  background-color: #CC0000;
+}
+/*main1背景图*/
+.header_bg{
+  width:100vw;
+  height:100vh;
+  background:url('../img/shopMall_1.jpg');
+  background-size: contain;
+}
+/*自定义图片样式*/
+.img-responsive{
+  display: block;
+  width: 100%;
+  height: 100%;
+}

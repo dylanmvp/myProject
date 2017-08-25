@@ -1,0 +1,79 @@
+<!--头部-->
+<ion-side-menus ng-controller="aboutCtrl">
+  <!-- 侧边栏菜单 左边-->
+  <ion-side-menu width="150" side="left" class="header">
+    <ul class="list list-inset">
+      <!--模态框弹出-->
+      <li class="item calm-bg" ng-click="showCustomModal()">关于</li>
+      <!--底部上拉框-->
+      <li class="item balanced-bg" ng-click="showActionSheet()">分享</li>
+      <li class="item royal-bg" ng-click="clearItem()">退出登录</li>
+    </ul>
+  </ion-side-menu>
+  <ion-side-menu-content>
+    <ion-header-bar class="header_color" align-title="center">
+      <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+      <h1 class="title">Shopping Mall</h1>
+    </ion-header-bar>
+    <ion-content class="header_bg">
+      <div class="list" style="margin-top:5vh">
+        <!--轮播1 自带-->
+        <ion-slide-box style="width:100vw;height:30vh" auto-play="true" does-continue="true" slide-interval=2000>
+          <ion-slide style="height:100%">
+            <div class="box banner" style="height:100%">
+              <img src="img/ls.jpg" class="img-responsive">
+            </div>
+          </ion-slide>
+          <ion-slide style="height:100%">
+            <div class="box banner" style="height:100%">
+              <img src="img/sjl.jpg" class="img-responsive">
+            </div>
+          </ion-slide>
+          <ion-slide style="height:100%">
+            <div class="box banner" style="height:100%">
+              <img src="img/xlz.jpg" class="img-responsive">
+            </div>
+          </ion-slide>
+          <ion-slide style="height:100%">
+            <div class="box banner" style="height:100%">
+              <img src="img/gaier.jpg" class="img-responsive">
+            </div>
+          </ion-slide>
+          <ion-slide style="height:100%">
+            <div class="box banner" style="height:100%">
+              <img src="img/betjpg.jpg" class="img-responsive">
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+
+        <a class="item item-icon-right assertive" ui-sref="main2" style="margin:5vh 0;background: transparent">
+          <i class="icon ion-forward"></i>
+          enter
+        </a>
+
+        <!--<div class="item item-image" style="height:185px">-->
+          <!--<img src="img/gj.jpg" class="img-responsive">-->
+        <!--</div>-->
+        <!--<div class="item item-image" style="height:185px">-->
+          <!--<img src="img/sjl.jpg" class="img-responsive">-->
+        <!--</div>-->
+        <!--<div class="item item-image" style="height:185px">-->
+          <!--<img src="img/nd.jpg" class="img-responsive">-->
+        <!--</div>-->
+        <!--轮播二 无缝-->
+        <ion-slide-box auto-play="true" slide-interval=2000 does-continue="true" delegate-handle="slideimgs" class="slidebox" on-slide-changed="slideHasChanged($index)" style="width:100vw;height:30vh">
+          <ion-slide ng-repeat="banner in bannerList" style="height:100%">
+            <div class="box banner" style="height:100%">
+              <img ng-src="img/{{banner.IMGPATH}}" class="img-responsive"/></div>
+          </ion-slide>
+        </ion-slide-box>
+              <!--图片资料-->
+              <!--<img src="img/ls.jpg" class="img-responsive">-->
+              <!--<img src="img/sjl.jpg" class="img-responsive">-->
+              <!--<img src="img/xlz.jpg" class="img-responsive">-->
+              <!--<img src="img/gaier.jpg" class="img-responsive">-->
+              <!--<img src="img/betjpg.jpg" class="img-responsive">-->
+      </div>
+    </ion-content>
+  </ion-side-menu-content>
+</ion-side-menus>

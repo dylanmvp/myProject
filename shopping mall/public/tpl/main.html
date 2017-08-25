@@ -1,0 +1,100 @@
+<!--引入头部-->
+<div ng-include="'tpl/include/header1.html'"></div>
+<!--主页面2动态获取用户需求数据-->
+<div style="width:20%;margin-top:49px;">
+<ul id="list_good" class="list">
+  <!--传参数经常困扰我,配合ng-repeat的$index+1把参数传过去,利用mvc模型动态生成多个li-->
+  <li class="item" ng-click="load($index+1)" ng-repeat="tmp in list">
+    <h4>{{tmp}}</h4>
+  </li>
+</ul>
+</div>
+<ion-content class="has-header has-footer">
+  <!--上拉更新数据-->
+  <ion-refresher
+    on-refresh="refreshData()">
+  </ion-refresher>
+  <div class="row">
+    <!--此处不固定侧边栏，改为固定样式，见上面-->
+    <!--<div class="col-20">-->
+      <!--<ul class="list">-->
+        <!--<li class="item list_active">-->
+          <!--<h4>国际名品</h4>-->
+        <!--</li>-->
+        <!--<li class="item">-->
+          <!--<h4>时尚潮流</h4>-->
+        <!--</li>-->
+        <!--<li class="item">-->
+          <!--<h4>都市女郎</h4>-->
+        <!--</li>-->
+        <!--<li class="item">-->
+          <!--<h4>绅士风度</h4>-->
+        <!--</li>-->
+        <!--<li class="item">-->
+          <!--<h4>运动达人</h4>-->
+        <!--</li>-->
+        <!--<li class="item">-->
+          <!--<h4>人气餐厅</h4>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+    <div class="col-80 col-offset-20">
+      <div class="list">
+        <!--动态获取数据库数据解析显示-->
+        <a class="item item-thumbnail-left" href="javascript:void(1)" ng-repeat="res in shopList">
+          <img ng-src="img/{{res.img}}">
+          <h2>{{res.brand}}</h2>
+          <p>{{res.intro}}</p>
+          <p class="text-right">
+            <button class="button button-balanced button-small" ui-sref="detail({did:res.did})">查看详情</button>
+          </p>
+        </a>
+        <!--假数据清空-->
+        <!--<a class="item item-thumbnail-left" href="#/detail">-->
+          <!--<img src="img/pm.jpg">-->
+          <!--<h2>PUMA</h2>-->
+          <!--<p>PUMA（彪马）是德国运动品牌，提出全新品牌口号Forever Faster，设计提供专业运动装备，产品涉及跑步、足球、高尔夫乃至赛车领域。PUMA集团拥有的品牌PUMA，Cobra高尔夫和Tretorn。2004年，彪马公司宣布，通过与宝马Mini的跨界合作，彪马成为了2004年F1夺标呼声最高的宝马-威廉姆斯车队的服饰供应商。</p>-->
+          <!--<p class="text-right">-->
+            <!--<button class="button button-balanced button-small">查看详情</button>-->
+          <!--</p>-->
+        <!--</a>-->
+        <!--<a class="item item-thumbnail-left" href="#/detail">-->
+          <!--<img src="img/th.jpg">-->
+          <!--<h2>Tommy Hifger</h2>-->
+          <!--<p>美国休闲领导品牌之一的TOMMY HILFIGER是休闲精品。它独特的款式设计与生活品位使得该品牌在庞大的生活潮流市场中，鹤立于顶尖之位。年轻、性感与真实;是现代年轻人的追求，凸显个性、讲求自由是当代人的风格;而这些有许多也正是美国服饰风格的精髓所在。于是 TOMMY HILFIGER 这样一个极具代表性、以设计掌舵人的名字为名的经典美国服饰品牌。其红白蓝的品牌标志，强调出崇尚自由的时尚精神，更成为服饰设计的主要色调，带出年轻休闲的美式风格。</p>-->
+          <!--<p class="text-right">-->
+            <!--<button class="button button-balanced button-small">查看详情</button>-->
+          <!--</p>-->
+        <!--</a>-->
+        <!--<a class="item item-thumbnail-left" href="#/detail">-->
+          <!--<img src="img/s.jpg">-->
+          <!--<h2>SELECTED</h2>-->
+          <!--<p>来自欧洲的SELECTED（思莱德）品牌，是全球最大时尚集团之一的 BESTSELLER 旗下独具魅力和品味的都会精英男装品牌。1997年诞生于丹麦，2008年BESTSELLER集团将SELECTED （思莱德）引入中国市场。SELECTED （思莱德）将锐意风格、时尚创意、高端品质和精湛工艺融为一体，旨在为富于品味的都会精英男士打造出融入国际潮流和设计的摩登形象，并由此迅速成为该集团旗下又一成功男装品牌。无论在米兰、伦敦、东京、纽约…… 还是北京、上海和天津，在全球各地大都会的街头都能感受到由SELECTED（思莱德）带来的最新流行趋势和时尚风潮。</p>-->
+          <!--<p class="text-right">-->
+            <!--<button class="button button-balanced button-small">查看详情</button>-->
+          <!--</p>-->
+        <!--</a>-->
+        <!--<a class="item item-thumbnail-left" href="#/detail">-->
+          <!--<img src="img/gxg.jpg">-->
+          <!--<h2>GXG</h2>-->
+          <!--<p>GXG创办于二十世纪七十年代末，是一家专业从事都市高品味休闲服装经营的设计公司，由Gill和Green两兄弟联手组创与香港银博兴投资公司合资的宁波合和杰斯卡服饰有限公司进行中国大陆区品牌推广工作，GXG具有法国设计风格Gill和Green的年轻时尚男性品牌。</p>-->
+          <!--<p class="text-right">-->
+            <!--<button class="button button-balanced button-small">查看详情</button>-->
+          <!--</p>-->
+        <!--</a>-->
+        <!--//下拉加载更多-->
+        <ion-infinite-scroll
+          ng-if="hasMore"
+          icon="ion-load-d"
+          on-infinite="loadMore()">
+        </ion-infinite-scroll>
+        <!--没有数据时显示-->
+        <div class="item text-center assertive" ng-hide="hasMore">
+          我是有底线的
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<!--引入尾部-->
+<div ng-include="'tpl/include/footer.html'"></div>

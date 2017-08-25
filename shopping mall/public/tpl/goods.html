@@ -1,0 +1,23 @@
+<!--引入头部-->
+<div ng-include="'tpl/include/header1.html'"></div>
+<!--个人中心页面，用于查找订单信息-->
+<ion-content class="has-header has-footer">
+  <ul class="list list-inset text-center" style="display: flex;width:100%;box-sizing: border-box">
+    <li style="width:32%;box-sizing: border-box" class="item item-icon-right" ui-sref="outPage">
+      在路上
+      <i class="icon ion-android-arrow-dropdown">
+      </i>
+    </li>
+    <li style="width:32%;box-sizing: border-box" class="item item-icon-right" ui-sref="outPage1">
+      已收货
+      <i class="icon ion-android-arrow-dropdown"></i>
+    </li>
+    <li style="width:32%;box-sizing: border-box" class="item item-icon-right" ui-sref="outPage2">
+      已评价
+      <i class="icon ion-android-arrow-dropdown"></i>
+    </li>
+  </ul>
+  <ui-view></ui-view>
+</ion-content>
+<!--引入尾部-->
+<div ng-include="'tpl/include/footer.html'"></div>

@@ -1,0 +1,22 @@
+<!--登录页面-->
+<!--<ion-modal-view class="header">-->
+<div class="s_img">
+  <!--注意控制器的位置不然找不到表单数据-->
+  <ion-content  ng-controller="loginCtrl">
+    <div class="list list-inset" style="margin-top:20vh">
+      <h1 class="balanced text-center" ui-sref="start">
+        <icon class="ion ion-android-close"></icon>
+      </h1>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">昵称</span>
+        <input type="text" placeholder="请输入您的用户名(6-12位数字或字母或汉字)" ng-blur="submitBlur()" required ng-model="order.userName">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">密码</span>
+        <input type="password" placeholder="请输入您的密码(6-12位数字或字母)" ng-model="order.userPwd" required>
+      </label>
+      <button class="button button-full button-balanced" ng-click="submitOrder();showAlert();">登录</button>
+    </div>
+  </ion-content>
+</div>
+<!--</ion-modal-view>-->

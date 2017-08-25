@@ -1,0 +1,49 @@
+<!--引入头部-->
+<div ng-include="'tpl/include/header1.html'"></div>
+<!--购物车结算之前页面-->
+<ion-content class="has-header has-footer" ng-show="!isCartEmpty">
+  <h4 class="text-center">
+    全部商品
+  </h4>
+  <!--<h6>-->  <!--该服务为开通-->
+    <!--<button class="button button-clear button-dark" ng-click="toggleEditStatus()">{{editMsg}}</button>-->
+  <!--</h6>-->
+  <div class="list list-inset">
+    <div class="item"  ng-repeat="list in cartList">
+      <div class="row row-center" >
+        <div class="col col-25">
+          <a href="#/detail/{{list.uid}}" >
+            <img class="img-responsive" ng-src="img/{{list.img}}" alt=""/>
+          </a>
+        </div>
+        <div class="col col-offset-50" ng-hide="editEnable">
+          <h3 class="energized">{{list.info}}</h3>
+          <h2 class="assertive">{{list.pri}}</h2>
+        </div>
+        <div class="col col-offset-50" ng-show="editEnable">
+          <button style="width:35px;" ng-click="reduceCount($index)">-</button>
+          <span>{{count}}</span>
+          <button style="width:35px;" ng-click="increaseCount($index)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="row row-center">
+        <span style="margin-right:150px">合计：<span class="assertive">{{priAll | currency:'¥'}}</span></span>
+        <button class="button button-balanced" ng-click="payJump()">结算</button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<!--用户什么也没有买-->
+<ion-content ng-show="isCartEmpty" style="margin-top: 40vh">
+  <div class="card" >
+    <div class="item">
+      <button
+        ui-sref="main2"
+        class="button button-balanced button-block">空空如也 去买买买吧</button>
+    </div>
+  </div>
+</ion-content>
+<!--引入尾部-->
+<div ng-include="'tpl/include/footer.html'"></div>
